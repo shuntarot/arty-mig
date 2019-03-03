@@ -12,7 +12,7 @@ set output {output}
 
 set inc_list    {}
 set ip_dir      {../ip/output}
-set file_list   {../rtl/arty_top.sv ../rtl/cmn.sv}
+set file_list   {../rtl/arty_top.sv}
 set xdc_list    {arty.xdc}
 
 #

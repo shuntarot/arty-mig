@@ -11,7 +11,7 @@ set debug  0
 set ip_dir {output}
 
 set inc_list    {}
-set ip_list     {mmcm.tcl mig.tcl jtag_axi.tcl}
+set ip_list     {mmcm.tcl}
 set file_list   {}
 set xdc_list    {}
 

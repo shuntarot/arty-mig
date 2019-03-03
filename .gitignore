@@ -1,0 +1,9 @@
+.Xil
+*.cache
+*.hw
+output
+*.jou
+*.log
+*.xpr
+*.html
+*.xml

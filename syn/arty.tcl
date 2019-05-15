@@ -85,5 +85,5 @@ report_drc                       -file $output/drc.rpt
 #
 
 write_checkpoint   -force $output/$top
-write_bitstream    -force $output/$top
+write_bitstream    -force -logic_location_file -readback_file $output/$top
 write_debug_probes -force $output/$top

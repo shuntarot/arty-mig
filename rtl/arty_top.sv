@@ -6,7 +6,7 @@ module arty_top (
 
   logic         clk_i;     // 166MHz
   logic         clk;       // gated clock
-  logic 	rstn;
+  logic         rstn;
   logic         locked;
 
   logic         runtest;
@@ -15,7 +15,7 @@ module arty_top (
   logic         tms;
 
   logic [31:0]  r_count;
-   
+
   //-------------------------------------------------------------------------------
   // MISC
   //-------------------------------------------------------------------------------
@@ -65,7 +65,7 @@ module arty_top (
   //----------------------------------------------------------
   // JTAG I/F
   //----------------------------------------------------------
-   
+
   BSCANE2 #(.JTAG_CHAIN(4))  // Value for USER command.
   u_bscan (
     .CAPTURE(),   // o: CAPTURE output from TAP controller.
@@ -84,12 +84,12 @@ module arty_top (
   //----------------------------------------------------------
   // DUT
   //----------------------------------------------------------
-   
+
   always_ff @(posedge clk or negedge rstn) begin
     if (!rstn)
       r_count <= '0;
     else
       r_count <= r_count + 1;
   end
-   
+
 endmodule

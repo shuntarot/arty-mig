@@ -8,10 +8,8 @@ DUMP      ?= off
 XVLOG_OPT += -sv
 # XVLOG_OPT += -i $(XILINX_VIVADO)/data/verilog/src/xeclib
 XVLOG_OPT += -i ../rtl
-XVLOG_OPT += -i ../ip/output/mmcm
-XVLOG_OPT += -i ../ip/output/mig
-XVLOG_OPT += -i ../ip/output/mig/mig/example_design/sim
-XVLOG_OPT += -i ../ip/output/jtag_axi
+XVLOG_OPT += -i ../ip/output/jtag_axilite
+XVLOG_OPT += -i ../ip/output/uart
 
 XELAB_OPT += -L unisims_ver -L secureip
 

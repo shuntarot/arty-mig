@@ -1,19 +1,8 @@
 tb.sv
 
 $RTL_DIR/arty_top.sv
-$RTL_DIR/cmn.sv
+$RTL_DIR/axi_interface.sv
 
-$IP_DIR/output/mmcm/mmcm_sim_netlist.v
-$IP_DIR/output/mig/mig/example_design/sim/ddr3_model.sv
-$IP_DIR/output/jtag_axi/jtag_axi_sim_netlist.v
-
-$IP_DIR/output/mig/mig/user_design/rtl/mig.v
-$IP_DIR/output/mig/mig/user_design/rtl/mig_mig_sim.v
---sourcelibdir $IP_DIR/output/mig/mig/user_design/rtl/axi
---sourcelibdir $IP_DIR/output/mig/mig/user_design/rtl/clocking
---sourcelibdir $IP_DIR/output/mig/mig/user_design/rtl/controller
---sourcelibdir $IP_DIR/output/mig/mig/user_design/rtl/ecc
---sourcelibdir $IP_DIR/output/mig/mig/user_design/rtl/ip_top
---sourcelibdir $IP_DIR/output/mig/mig/user_design/rtl/phy
---sourcelibdir $IP_DIR/output/mig/mig/user_design/rtl/ui
+$IP_DIR/output/jtag_axilite/jtag_axilite_sim_netlist.v
+$IP_DIR/output/uart/uart_sim_netlist.v
 --sourcelibext .v

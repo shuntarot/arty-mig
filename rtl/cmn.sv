@@ -89,17 +89,18 @@ module cmn_tp #(
 
 localparam WORD = (1 << AW);
 
-logic [PW-1:0] w_adra = (AW == 0) ? 0 : adra;
-logic [PW-1:0] w_adrb = (AW == 0) ? 0 : adrb;
-
+logic [PW-1:0] w_adra;
+logic [PW-1:0] w_adrb;
 logic [DW-1:0] r_mem[0:WORD-1];
+logic [DW-1:0] r_buf;
 
+assign w_adra = (AW == 0) ? 0 : adra;
+assign w_adrb = (AW == 0) ? 0 : adrb;
+   
 always_ff @(posedge clk) begin
   if (mea && wea)
     r_mem[w_adra] <= da;
 end
-
-logic [DW-1:0] r_buf;
 
 generate
 if (USE_BUF) begin : use_buf

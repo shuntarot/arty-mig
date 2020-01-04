@@ -19,13 +19,7 @@ set xdc_list    {arty.xdc}
 # Project
 #
 
-create_project -part $part -force $top
-set_property -dict [list \
-		    BOARD_PART $board \
-		    TARGET_LANGUAGE {Verilog} \
-		    DEFAULT_LIB {xil_defaultlib} \
-		    IP_REPO_PATHS $ip_dir \
-		    ] [current_project]
+set_part $part
 
 #
 # IP
@@ -37,7 +31,7 @@ read_ip [glob -directory $ip_dir [file join * {*.xci}]]
 # Read files
 #
 
-set_property INCLUDE_DIRS $inc_list [current_fileset]
+# set_property INCLUDE_DIRS $inc_list [current_fileset]
 
 foreach f $file_list { read_verilog -sv $f }
 foreach f $xdc_list  { read_xdc $f }
@@ -71,7 +65,6 @@ route_design
 
 report_datasheet                 -file $output/datasheet.txt
 report_io                        -file $output/io.rpt
-# report_qor                       -file $output/qor.rpt
 report_clocks                    -file $output/clock.rpt
 report_timing_summary            -file $output/timing.rpt -max_paths 10
 report_utilization -hierarchical -file $output/util.rpt

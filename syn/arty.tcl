@@ -2,6 +2,9 @@
 # Parameters
 #
 
+if {![catch {set board_files $env(BOARD_FILES)}]} {
+    set_param board.repoPaths $board_files
+}
 set_param general.maxThreads 8
 
 set top    {arty_top}
